@@ -1,11 +1,15 @@
-import type { Metadata } from "next";
 import './_styles/global.scss';
 import Logo from "./_components/Logo";
 import Navigation from "@/app/_components/Navigation";
-export const metadata: Metadata = {
-  title: "The Wild Oasis"
-};
 
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: {
+    template: '%s The Wild Oasis',
+    default: 'Welcome The Wild Oasis'
+  },
+  description: 'Luxurious cabin hotel'
+};
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -18,7 +22,7 @@ export default function RootLayout({
           <Logo />
           <Navigation />
         </header>
-        <main>
+        <main className='min-h-screen'>
           {children}
         </main>
         <footer>

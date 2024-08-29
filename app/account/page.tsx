@@ -3,7 +3,7 @@ export const metadata = {
 }
 
 function page() {
-    return <div>account page</div>;
+    return <div>hello guest</div>;
 }
 
 export default page;

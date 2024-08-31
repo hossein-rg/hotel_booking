@@ -5,6 +5,17 @@ import path from 'path';
 const nextConfig = {
     sassOptions:{
         includePaths: [path.join(process.cwd(), 'styles')],
-    }
+    },
+      images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'shjpzdwxolhcwnrxdxgo.supabase.co',
+            port: '',
+            pathname: '/storage/v1/object/public/cabin-images/**',
+          },
+        ],
+      },
+
 };
 export default nextConfig;

@@ -15,7 +15,6 @@ export default function Home() {
         >
           Explore luxury cabins
         </Link>
-        <p>wtf</p>
       </div>
     </main>
   );

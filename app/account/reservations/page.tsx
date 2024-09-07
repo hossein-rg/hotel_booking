@@ -4,7 +4,7 @@ export const metadata = {
 }
 export default function Page() {
     // CHANGE
-    const bookings: { id: string }[] = [
+    const bookings: any[] = [
     ];
 
     return (

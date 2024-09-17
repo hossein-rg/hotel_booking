@@ -2,7 +2,17 @@ import TextExpander from "@/app/_components/TextExpander";
 import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 import Image from 'next/image';
 
-export default function Cabin({ cabin }) {
+interface CabinType {
+    id: string;
+    name: string;
+    maxCapacity: number;
+    regularprice: number;
+    discount: number;
+    image: string;
+    description: string;
+}
+
+export default function Cabin({ cabin }: { cabin: CabinType }) {
     const { id, name, maxCapacity, regularprice, discount, image, description } = cabin;
     return <div className="grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24">
         <div className="relative scale-[1.15] -translate-x-3">

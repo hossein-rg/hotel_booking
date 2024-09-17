@@ -8,6 +8,7 @@ interface ButtonProps {
     activeFilter: FilterItem;
     handleFilter: (filterItem: FilterItem) => void;
     children: React.ReactNode;
+    filter: string | null;
 }
 export default function Filter() {
     const router = useRouter();
@@ -31,7 +32,6 @@ export default function Filter() {
 }
 
 const Button: React.FC<ButtonProps> = ({ children, activeFilter, handleFilter, filter }) => {
-    console.log(filter)
     return (
         <button className={`${filter == activeFilter || (filter == null && activeFilter == 'all') ? 'text-primary-50 bg-primary-700' : ''} px-5 py-2 hover:bg-primary-700`} onClick={() => handleFilter(activeFilter)}>
             {children}

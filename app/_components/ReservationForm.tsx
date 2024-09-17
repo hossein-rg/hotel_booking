@@ -1,5 +1,13 @@
 'use client'
-function ReservationForm({ cabin }) {
+
+import React from "react";
+
+interface Cabin {
+    cabin: {
+        maxcapacity: number;
+    }
+}
+const ReservationForm: React.FC<Cabin> = ({ cabin }) => {
     // CHANGE
     const { maxcapacity } = cabin;
 

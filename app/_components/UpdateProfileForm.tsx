@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 
-function UpdateProfileForm({ children }) {
+function UpdateProfileForm({ children }: React.PropsWithChildren<unknown>) {
     return <form className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col">
         <div className="space-y-2">
             <label>Full name</label>
@@ -23,7 +23,7 @@ function UpdateProfileForm({ children }) {
             <div className="flex items-center justify-between">
                 <label htmlFor="nationality">Where are you from?</label>
                 <img
-                    src={countryFlag}
+                    src={'countryFlag'}
                     alt="Country flag"
                     className="h-5 rounded-sm"
                 />

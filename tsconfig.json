@@ -32,7 +32,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/_lib/data-service.js"
+    "app/_lib/data-service.js",
+    "app/api/cabins/route.tsx",
+    "app/api/cabins/[cabinId]/route.tsx"
   ],
   "exclude": [
     "node_modules"
